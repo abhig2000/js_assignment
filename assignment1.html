@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <h2>Current Day and Time</h2>
+    </head>
+    
+    <body>
+       <script type="text/javascript">
+           var mydate= new Date();
+           var myday= mydate.getDay();
+
+           var weekday = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+
+           document.write("Sample Output :"+" Today is : " + weekday[myday]);
+           document.write("<br/>");
+
+           var hours = mydate.getHours();
+           var ampm = hours >= 12 ? 'PM' : 'AM';
+           hours = hours %12;
+           hours=hours ? hours :12;
+           var minutes=mydate.getMinutes();
+           var mytime = hours + " "+ampm +" : "+minutes+" : "+mydate.getMilliseconds();
+           document.write("\tCurrent time is : " + mytime);
+
+       </script>
+    </body>
+</html>
